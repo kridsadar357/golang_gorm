@@ -75,6 +75,6 @@ func UploadFileMethod(c *gin.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	filepath := "http://localhost:8000/file" + filename
+	filepath := "http://localhost:8080/file/" + filename
 	c.JSON(http.StatusOK, gin.H{"filepath": filepath})
 }
